@@ -28,6 +28,7 @@ pipeline {
     stage ('Verify test user') {
       when {
         branch 'master'
+      }
       steps {
         sh 'oc login -u testuser -p redhat123 --insecure-skipe-tls-verify \
 https://kubernetes.default.svc:443'
